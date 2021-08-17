@@ -1,0 +1,8 @@
+#criando models (Models\\ - namespace, -m cria migrations)
+php artisan make:model Models\\Plan -m
+
+#rodar migrations
+php artisan migrate
+
+#criar controllers
+php artisan make:controller PlanController
