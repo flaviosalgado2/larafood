@@ -6,3 +6,6 @@ php artisan migrate
 
 #criar controllers
 php artisan make:controller PlanController
+
+#servidor php laravel ibutido
+php artisan serve
