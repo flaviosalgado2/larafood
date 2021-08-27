@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::any('admin/plans/search', 'Admin\PlanController@search')->name('plans.search');
 Route::get('admin/plans/create', 'Admin\PlanController@create')->name('plans.create');
 Route::delete('admin/plans/{url}', 'Admin\PlanController@destroy')->name('plans.destroy');
 Route::get('admin/plans/{url}', 'Admin\PlanController@show')->name('plans.show');
