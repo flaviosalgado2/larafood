@@ -3,7 +3,12 @@
 @section('title', 'Planos')
 
 @section('content_header')
-    <h1>Planos <a href="{{ route('plans.create') }}" class="btn btn-dark">ADD</a></h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('plans.index') }}" class="active">Planos</a></li>
+    </ol>
+
+    <h1>Planos <a href="{{ route('plans.create') }}" class="btn btn-dark"><i class="fas fa-plus-square"></i> ADD</a></h1>
 @stop
 
 @section('content')
@@ -23,7 +28,7 @@
                     <tr>
                         <th>Nome</th>
                         <th>Preço</th>
-                        <th>Ações</th>
+                        <th width="150">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,6 +41,7 @@
                                 R$ {{ number_format($plan->price, 2, ',', '.') }}
                             </td>
                             <td style="width: 10px;">
+                                <a href="{{ route('plans.edit', $plan->url) }}" class="btn btn-info">Editar</a>
                                 <a href="{{ route('plans.show', $plan->url) }}" class="btn btn-warning">Ver</a>
                             </td>
                         </tr>

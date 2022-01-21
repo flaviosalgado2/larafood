@@ -254,8 +254,9 @@ return [
             'label_color' => 'success',
         ],
         [
-            'text' => 'plano',
+            'text' => 'planos',
             'url'  => 'admin/plans',
+            'icon' => 'fas fa-list-alt'
         ],
     ],
 

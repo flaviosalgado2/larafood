@@ -9,3 +9,9 @@ php artisan make:controller PlanController
 
 #servidor php laravel ibutido
 php artisan serve
+
+#validacao de formularios com laravel
+php artisan make:request StoreUpdatePlan
+
+#criar observers
+php artisan make:observer PlanObserver
