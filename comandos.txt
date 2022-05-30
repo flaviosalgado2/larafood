@@ -15,3 +15,6 @@ php artisan make:request StoreUpdatePlan
 
 #criar observers
 php artisan make:observer PlanObserver
+
+#criar controllers com resource
+php artisan make:controller Admin\\ACL\\ProfileController --resource
