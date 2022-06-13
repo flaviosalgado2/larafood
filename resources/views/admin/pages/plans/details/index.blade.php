@@ -10,7 +10,7 @@
         <li class="breadcrumb-item active"><a href="{{ route('details.plan.index', $plan->url) }}" class="active">{{ $plan->name }}</a>Planos</li>
     </ol>
 
-    <h1>Detalhes do Plano {{ $plan->name }} <a href="{{ route('plans.create') }}" class="btn btn-dark"><i class="fas fa-plus-square"></i> ADD</a></h1>
+    <h1>Detalhes do Plano {{ $plan->name }} <a href="{{ route('details.plan.create', $plan->url) }}" class="btn btn-dark"><i class="fas fa-plus-square"></i> ADD</a></h1>
 @stop
 
 @section('content')
@@ -43,7 +43,7 @@
                                 R$ {{ number_format($plan->price, 2, ',', '.') }}
                             </td>
                             <td style="width: 10px;">
-                                <a href="{{ route('details.plans.index', $plan->url) }}" class="btn btn-primary">Detalhes</a>
+                                <a href="{{ route('details.plan.index', $plan->url) }}" class="btn btn-primary">Detalhes</a>
                                 <a href="{{ route('plans.edit', $plan->url) }}" class="btn btn-info">Editar</a>
                                 <a href="{{ route('plans.show', $plan->url) }}" class="btn btn-warning">Ver</a>
                             </td>
