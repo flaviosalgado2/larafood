@@ -90,6 +90,7 @@ class PlanController extends Controller
 
     public function update(StoreUpdatePlan $request, $url)
     {
+        //die;
         $plan = $this->repository->where('url', $url)->first();
 
         if (!$plan)
